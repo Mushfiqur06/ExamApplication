@@ -12,6 +12,9 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//Routers
+app.use('/api/users', require('./routes/userRoutes'))
+
 //PORT 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
