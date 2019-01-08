@@ -4,7 +4,9 @@
   "description": "This is a Exam Application",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "npm start --prefix client",
+    "server": "nodemon app.js",
+    "dev": "concurrently \" npm run client \" \" npm run server \" "
   },
   "author": "Mushfiqur Rahman Niloy",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.10.0"
   }
 }
