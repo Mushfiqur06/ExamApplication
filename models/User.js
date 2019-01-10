@@ -18,7 +18,7 @@ const userSchema = new Schema({
         ...common
     },
     accountStatus: String,
-    isActivated: boolean,
+    isActivated: Boolean,
     activateToken: String
 })
 

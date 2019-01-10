@@ -13,7 +13,7 @@ const registrationValidate = user => {
     //email validator
     if(!user.email){
         error.email = 'Please provide your Email';
-    }else if(!validator.isValid(user.email)){
+    }else if(!validator.isEmail(user.email)){
         error.email = 'Your email is not valid';
     }
 
@@ -27,13 +27,13 @@ const registrationValidate = user => {
     //confirm passowrd
     if(!user.confirmPassword){
         error.confirmPassword = 'Please provide your confirmation password';
-    }else if(error.password !== user.confirmPassword){
+    }else if(user.password !== user.confirmPassword){
         error.confirmPassword = 'Password Does not match';
     }
 
     return {
         error,
-        isValid: Object.keys(error) === 0
+        isValid: Object.keys(error) == 0
     }
 }
 

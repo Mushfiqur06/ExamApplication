@@ -12,7 +12,7 @@ module.exports = {
             res.status(400).json(result.error)
         }else{
             res.status(200).json({
-                message: 'Everything is ok';
+                message: 'Everything is ok'
             })
         }
     }
