@@ -41,7 +41,9 @@ module.exports = {
                     activateToken
                   })
 
-                const newUser = await user.save()
+                  console.log(user)
+
+                const newUser = await user.save();
 
                 res.status(201).json({
                   message: 'User created successfully',
